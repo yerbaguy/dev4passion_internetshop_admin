@@ -1,0 +1,15 @@
+current directory: /Users/bartosz/Documents/react-native/internetshop_admin/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+/Users/bartosz/.rbenv/versions/2.7.5/bin/ruby -I /Users/bartosz/.rbenv/versions/2.7.5/lib/ruby/2.7.0 -r ./siteconf20250325-22389-cwu7dv.rb extconf.rb
+creating Makefile
+
+current directory: /Users/bartosz/Documents/react-native/internetshop_admin/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" clean
+
+current directory: /Users/bartosz/Documents/react-native/internetshop_admin/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR="
+compiling nkf.c
+linking shared-object nkf.bundle
+
+current directory: /Users/bartosz/Documents/react-native/internetshop_admin/vendor/bundle/ruby/2.7.0/gems/nkf-0.2.0/ext/nkf
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 nkf.bundle ./.gem.20250325-22389-1lykapb
