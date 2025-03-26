@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.internetshop_admin.app-mergeDebugResources-20:/values-v23/values-v23.xml",
+            "outputFile": "com.internetshop_admin.app-mergeDebugResources-29:/values-v23/values-v23.xml",
             "map": [
                 {
-                    "source": "/Users/bartosz/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/res/values-v23/values-v23.xml",
+                    "source": "/Users/bartosz/.gradle/caches/transforms-3/ac5e2869af029691d054f6135f7eab1b/transformed/appcompat-1.4.1/res/values-v23/values-v23.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,20,34,35,36,39,43,44,45,46",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4",

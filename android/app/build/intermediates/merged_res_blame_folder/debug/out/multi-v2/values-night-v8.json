@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.internetshop_admin.app-mergeDebugResources-20:/values-night-v8/values-night-v8.xml",
+            "outputFile": "com.internetshop_admin.app-mergeDebugResources-29:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/bartosz/.gradle/caches/transforms-3/1b40e4574e76bff5831ef4bf4270480d/transformed/appcompat-1.4.1/res/values-night-v8/values-night-v8.xml",
+                    "source": "/Users/bartosz/.gradle/caches/transforms-3/ac5e2869af029691d054f6135f7eab1b/transformed/appcompat-1.4.1/res/values-night-v8/values-night-v8.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9",
                         "startColumns": "4,4,4,4,4,4,4,4",

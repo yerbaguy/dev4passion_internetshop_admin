@@ -1,5 +1,8 @@
 apply plugin: "com.android.application"
 
+// apply plugin: "kotlin-android" // Uncomment if using Kotlin
+apply plugin: 'com.google.gms.google-services' // Apply Firebase plugin
+
 import com.android.build.OutputFile
 import org.apache.tools.ant.taskdefs.condition.Os
 
@@ -161,6 +164,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
     if (isNewArchitectureEnabled()) {
         // We configure the NDK build only if you decide to opt-in for the New Architecture.
         externalNativeBuild {
@@ -232,21 +240,26 @@ android {
     }
 
     // applicationVariants are e.g. debug, release
-    applicationVariants.all { variant ->
-        variant.outputs.each { output ->
-            // For each separate APK per architecture, set a unique version code as described here:
-            // https://developer.android.com/studio/build/configure-apk-splits.html
-            // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
-            def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
-            def abi = output.getFilter(OutputFile.ABI)
-            if (abi != null) {  // null for the universal-debug, universal-release variants
-                output.versionCodeOverride =
-                        defaultConfig.versionCode * 1000 + versionCodes.get(abi)
-            }
+    // applicationVariants.all { variant ->
+    //     variant.outputs.each { output ->
+    //         // For each separate APK per architecture, set a unique version code as described here:
+    //         // https://developer.android.com/studio/build/configure-apk-splits.html
+    //         // Example: versionCode 1 will generate 1001 for armeabi-v7a, 1002 for x86, etc.
+    //         def versionCodes = ["armeabi-v7a": 1, "x86": 2, "arm64-v8a": 3, "x86_64": 4]
+    //         def abi = output.getFilter(OutputFile.ABI)
+    //         if (abi != null) {  // null for the universal-debug, universal-release variants
+    //             output.versionCodeOverride =
+    //                     defaultConfig.versionCode * 1000 + versionCodes.get(abi)
+    //         }
 
-        }
-    }
+    //     }
+    // }
+
+
 }
+
+
+
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
@@ -255,6 +268,15 @@ dependencies {
     implementation "com.facebook.react:react-native:+"  // From node_modules
 
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+
+    implementation 'androidx.core:core:1.10.1' // Latest stable version
+    implementation platform('com.google.firebase:firebase-bom:32.7.0') // Use BOM for Firebase
+    implementation 'com.google.firebase:firebase-firestore'
+    implementation 'com.google.firebase:firebase-storage'
+
+
+
+
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
